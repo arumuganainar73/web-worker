@@ -18,6 +18,7 @@
          html,
          body {
          height: 100%;
+		 line-height: 10px;
          /* The html and body elements cannot have any padding or margin. */
          }
          /* Wrapper for page content to push down footer */
@@ -37,7 +38,7 @@
          background-color: #f5f5f5;
          }
          .overFlow{
-         overflow: scroll;height: 112px;word-break: break-all;
+         overflow: scroll;height: 100px;word-break: break-all;
          }
          /* Lastly, apply responsive CSS fixes as necessary */
          @media (max-width: 767px) {
@@ -181,7 +182,7 @@
                <h3>Sorting big array with Bucket Sort</h3>
             </div>
             <p class="lead" style="text-align: center;">
-               <button class="btn btn-large" onclick="javascript:nonWebWorker();">Without Web Worker</button>
+               <button class="btn btn-large" onclick="javascript:nonWebWorker();" >Without Web Worker</button>
                <button class="btn btn-success btn-large" onclick="javascript:withWebWorker();">With Web Worker</button>
             </p>
             <div id="progressbar" class="progress progress-striped active hide">
@@ -189,20 +190,18 @@
             </div>
             <div id="resultBox" class="well well-large hide">
                <p class="muted">
-                  Big Array sorted in:
+                  Big Array sorted using bucket sort:
                </p>
                <h1 id="timespent" style="font-size: 18px;font-weight: 200;line-height: 24px;color: inherit;margin-top:20px;" class="hide"></h1>
                <p id="withoutWW" style="font-size: 18px;font-weight: 200;line-height: 24px;color: inherit;margin-top:20px" class="hide">
                   As you can see, without Web Worker, your browser maybe able to sort the big Array but you can't work with your browser while sorting and also your browser won't render anything until sorting ends, that's why you can't see the animated progress bar in the page.
                </p>
-               Sorted Array : 
                <h6  class="overFlow" id="resultId"></h6>
                <p id="withWW" style="font-size: 18px;font-weight: 200;line-height: 24px;color: inherit;margin-top:20px" class="hide">
                   Your browser sorted big Array without any crash or lagging, because your browser supports Web Worker. When you do a job with Web Worker, it's just like when you run a program in another thread. Also you can see the animated progress bar while sorting.
                </p>
             </div>
          </div>
-         <div id="push"></div>
       </div>
       <div id="footer">
          <div class="container">
