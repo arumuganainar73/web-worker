@@ -6,6 +6,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="Sorting big Array with Bucket Sort">
       <meta name="author" content="Saleem Malik">
+	  
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCf608CfGZLX7Qadl18Rnu3uElrshdYBUI",
+    authDomain: "web-worker-ff594.firebaseapp.com",
+    databaseURL: "https://web-worker-ff594.firebaseio.com",
+    projectId: "web-worker-ff594",
+    storageBucket: "web-worker-ff594.appspot.com",
+    messagingSenderId: "192762019347"
+  };
+  firebase.initializeApp(config);
+</script>
       <script
          src="https://code.jquery.com/jquery-1.12.2.min.js"
          integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
@@ -74,7 +88,7 @@
                 preStart();
             var arrayInput = [];
                     var bucketSize = 5;
-                    for (var i = 1000; i >= 0; i--) {
+                    for (var i = 50000; i >= 0; i--) {
                         arrayInput.push(Math.random());
                     };
             
