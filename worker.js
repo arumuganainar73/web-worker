@@ -3,8 +3,8 @@ onmessage = function(e) {
 
         var arrayInput = [];
         var bucketSize = 5;
-        for (var i = 50; i >= 0; i--) {
-            arrayInput.push(Math.random());
+        for (var i = 1000; i >= 0; i--) {
+            arrayInput.push(Math.random(i));
         };
 
         // InsertionSort to be used within bucket sort
@@ -62,16 +62,21 @@ onmessage = function(e) {
             allBuckets.forEach(function(bucket) {
                 insertionSort(bucket);
                 bucket.forEach(function(element) {
-                    array.push(element)
+                    var elementWithBreak = element + '<br />';
+                    array.push(elementWithBreak)
                 });
             });
 
             return array;
         }
         var start = new Date().getTime();
-        bucketsort(arrayInput, bucketSize);
+        var sortedArray = bucketSort(arrayInput, bucketSize);
         var end = new Date().getTime();
         var time = end - start;
-        postMessage(time);
+        var resultantObj = {
+            'sortedArray': sortedArray,
+            'spentTime': time
+        };
+        postMessage(resultantObj);
     }
 };
