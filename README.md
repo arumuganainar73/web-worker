@@ -2,7 +2,7 @@
 Bucket sort in a big array with and without web worker
 
 # How to run
-open index.html and choose the buttons to test web worker demo
+open index.html and choose the buttons to test web worker [demo](https://web-worker-ff594.firebaseapp.com/)
 
 # Author
 A demo of HTML5 Web Worker, looping a big array and implement bucket sort to the formed array by [saleemmalikraja](https://github.com/saleemmalikraja).
