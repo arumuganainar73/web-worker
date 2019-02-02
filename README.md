@@ -9,6 +9,8 @@ A demo of HTML5 Web Worker, looping a big array and implement bucket sort to the
 
 # Bucket Sort Pseudo Code
 
+  Import some type of insertion sort to use in bucket sort function
+  
   Create bucketSort function (array, bucket size)
 
   Create vars for i, min, max, and bucket size
